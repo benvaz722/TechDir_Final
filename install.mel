@@ -1,0 +1,25 @@
+global proc PathLocator() {}; //proc is define {} is the same as the body dummy function to see where we are
+string $installFileInfo = `whatIs PathLocator`;//this gives info of the pathhlocator funtino with in
+string $installpath = `substring $installFileInfo 25 999`; //the last number is the range of the path
+string $pluginDir = `dirname $installpath`; //the entire that i need is here get dir of plug in
+
+string $srcDir = $pluginDir + "/src/";
+string $assetDir = $pluginDir + "/Assets/";
+
+global proc AddPluginToshelf(string $scriptName)
+{
+    global string $srcDir; // declare existance of srcdir so we can use it in function
+    global string $assetDir; // declare the existance of golbal var
+
+    string $scriptPath = $srcDir + $scriptName + ".py";
+    // To do: add icon
+    string $iconPath = $assetDir + $scriptName + ".png";
+    
+    string $currentSelf = `tabLayout -q -selectTab "ShelfLayout"`;
+    setParent $currentSelf;
+
+    string $command = "exec(open(\"" + $scriptPath + "\").read())";
+    shelfButton -c $command -stp "python" -image $iconPath; // stp = script type
+}
+
+AddPluginToshelf("Animator'sBuddy");
