@@ -1,6 +1,6 @@
 How to use
 ## AnimBuddy
-!['tool screen shot'](Assets/Capture.PNG)
+!['tool screen shot'](Assets/CaptureCorrect.PNG)
 
 #### Set Key Frame BTN
 * Select the Color box next to the "Set Key Frame" button to change the color of your story telling keys.
