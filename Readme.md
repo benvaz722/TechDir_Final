@@ -1,7 +1,7 @@
 How to use
 ## AnimBuddy
 !['tool screen shot'](Assets/CaptureCorrect.PNG)
-#### Set Key Frame BTN
+#### Create Button on shelf
 * Drag the install file into maya workspace.
 
 
